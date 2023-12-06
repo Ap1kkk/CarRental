@@ -206,7 +206,7 @@
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddSalonForm";
-            this.Text = "Добавить магазин";
+            this.Text = "Добавление магазина";
             this.Load += new System.EventHandler(this.AddShopForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

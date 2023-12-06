@@ -251,7 +251,7 @@
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddOrderLineItemForm";
-            this.Text = "AddOrderLineItem";
+            this.Text = "Добавление авто к заказу";
             this.ResumeLayout(false);
             this.PerformLayout();
 

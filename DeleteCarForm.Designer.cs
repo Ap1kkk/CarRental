@@ -76,7 +76,7 @@
             this.Controls.Add(this.label2);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeleteCarForm";
-            this.Text = "Удалить авто";
+            this.Text = "Удаление авто";
             this.Load += new System.EventHandler(this.DeleteProductForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -254,7 +254,7 @@
             this.Controls.Add(this.label4);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddCarForm";
-            this.Text = "AddProductForm";
+            this.Text = "Добавление машины";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -139,7 +139,7 @@
             this.Controls.Add(this.AddOrderBtn);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddOrderForm";
-            this.Text = "AddOrderForm";
+            this.Text = "Добавление заказа";
             this.ResumeLayout(false);
             this.PerformLayout();
 

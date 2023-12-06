@@ -349,7 +349,7 @@ namespace CarRental
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "Аренда машин";
             this.menuStrip3.ResumeLayout(false);
             this.menuStrip3.PerformLayout();
             this.tabPage1.ResumeLayout(false);

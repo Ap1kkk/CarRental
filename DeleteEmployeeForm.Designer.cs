@@ -114,7 +114,7 @@
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DeleteEmployeeForm";
-            this.Text = "Удалить сотрудника";
+            this.Text = "Удаление сотрудника";
             this.ResumeLayout(false);
             this.PerformLayout();
 

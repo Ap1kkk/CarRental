@@ -36,15 +36,15 @@ namespace CarRental
                 workBegin.TextLength > 0 &&
                 workEnd.TextLength > 0)
             {
-                Salon shop = new Salon();
-               shop.name =  name.Text;
-               shop.PhoneNumber = phoneNumber.Text;
-               shop.website = website.Text;
-               shop.adress = addres.Text;
-               shop.BeginWork = workBegin.Text;
-               shop.EndWork = workEnd.Text;
+                CarSalon shop = new CarSalon();
+                shop.Name =  name.Text;
+                shop.PhoneNumber = phoneNumber.Text;
+                shop.Website = website.Text;
+                shop.Adress = addres.Text;
+                shop.BeginWork = workBegin.Text;
+                shop.EndWork = workEnd.Text;
 
-                ContrDB.AddShopDB(shop);
+                DatabaseController.AddSalonDB(shop);
                 Close();
             }
             else
@@ -59,7 +59,7 @@ namespace CarRental
             phoneNumber.Text = "";
             website.Text = "";
             addres.Text = "";
-           workBegin.Text = "";
+            workBegin.Text = "";
             workEnd.Text = "";
         }
     }

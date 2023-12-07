@@ -8,12 +8,12 @@ namespace CarRental
 {
    public class Car
     {
-        public string category { get; set; }
-        public CarItem product { get; set; }
+        public string Category { get; set; }
+        public CarItem CarItem { get; set; }
 
         public Car()
         {
-            product = new CarItem();
+            CarItem = new CarItem();
         }
     }
 }

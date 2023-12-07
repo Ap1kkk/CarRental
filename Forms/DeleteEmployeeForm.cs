@@ -12,19 +12,19 @@ namespace CarRental
 {
     public partial class DeleteEmployeeForm : Form
     {
-        public string name_shop { get; set; }
+        private string _salonName { get; set; }
 
-        public DeleteEmployeeForm(string shopName)
+        public DeleteEmployeeForm(string salonName)
         {
             InitializeComponent();
-            name_shop = shopName;
+            _salonName = salonName;
         }
 
         private void DeleteEmployeeBtn_Click(object sender, EventArgs e)
         {
             if (NameTxtBox.TextLength > 0 && LastNameTxtBox.TextLength > 0)
             {
-                ContrDB.DeleteEmployeeDB(name_shop, NameTxtBox.Text, LastNameTxtBox.Text);
+                DatabaseController.DeleteEmployeeDB(_salonName, NameTxtBox.Text, LastNameTxtBox.Text);
                 Close();
             }
             else

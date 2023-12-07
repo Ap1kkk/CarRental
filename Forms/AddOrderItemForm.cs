@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace CarRental
 {
-    public partial class AddOrderLineItemForm : Form
+    public partial class AddOrderItemForm : Form
     {
         public Order orderItem = new Order();
         public Category categories;
         public string shop_name;
         public string typeProduct { get; set; }
-        public AddOrderLineItemForm(string shopName, Order order)
+        public AddOrderItemForm(string shopName, Order order)
         {
             InitializeComponent();
             shop_name = shopName;
@@ -31,7 +31,7 @@ namespace CarRental
 
         private void AddItemBtn_Click(object sender, EventArgs e)
         {
-            OrderLineitem prod = new OrderLineitem();
+            OrderItem prod = new OrderItem();
 
             if (name.TextLength > 0 &&
                index.TextLength > 0 &&
@@ -42,16 +42,16 @@ namespace CarRental
                descr.TextLength > 0 &&
                comboBox1.SelectedItem != null)
             {
-                prod.product.product.name = name.Text;
-                prod.product.product.id = Int32.Parse(index.Text);
-                prod.product.product.producer = producer.Text;
-                prod.product.product.date_create = date.Text;
-                prod.product.product.price = Int32.Parse(price.Text);
-                prod.product.product.count = Int32.Parse(count.Text);
-                prod.product.product.description = descr.Text;
-                prod.product.category = typeProduct;
+                prod.Car.CarItem.Name = name.Text;
+                prod.Car.CarItem.Id = Int32.Parse(index.Text);
+                prod.Car.CarItem.Producer = producer.Text;
+                prod.Car.CarItem.CreationDate = date.Text;
+                prod.Car.CarItem.Price = Int32.Parse(price.Text);
+                prod.Car.CarItem.StockQuantity = Int32.Parse(count.Text);
+                prod.Car.CarItem.Description = descr.Text;
+                prod.Car.Category = typeProduct;
 
-                orderItem.AddOrderLineItem(prod);
+                orderItem.AddOrderItem(prod);
                 AddOrderForm addOrderForm = new AddOrderForm(shop_name, orderItem);
                 addOrderForm.Show();
                 Close();

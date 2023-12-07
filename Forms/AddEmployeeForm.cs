@@ -12,11 +12,12 @@ namespace CarRental
 {
     public partial class AddEmployeeForm : Form
     {
-        public string shop_name;
-        public AddEmployeeForm(string ShopName)
+        private string _salonName { get; set; }
+
+        public AddEmployeeForm(string salonName)
         {
             InitializeComponent();
-            shop_name = ShopName;
+            _salonName = salonName;
         }
         
         private void ClearBtn_Click(object sender, EventArgs e)
@@ -41,15 +42,15 @@ namespace CarRental
                workEnd.TextLength > 0 )
             {
                 Employee worker = new Employee();
-                worker.firstName = name.Text;
-                worker.lastName = lastname.Text;
+                worker.Firstname = name.Text;
+                worker.Lastname = lastname.Text;
                 worker.PhoneNumber = phone.Text;
-                worker.status = status.Text;
-                worker.experience = experiense.Text;
-                worker.workBegin = workBegin.Text;
-                worker.workEnd = workEnd.Text;
+                worker.Status = status.Text;
+                worker.Experience = experiense.Text;
+                worker.WorkBegin = workBegin.Text;
+                worker.WorkEnd = workEnd.Text;
 
-                ContrDB.AddEmployeeDB(shop_name, worker);
+                DatabaseController.AddEmployeeDB(_salonName, worker);
                 Close();
             }
             else

@@ -10,24 +10,18 @@ using System.Windows.Forms;
 
 namespace CarRental
 {
-    public partial class DeleteCarForm : Form
+    public partial class DeleteSalonForm : Form
     {
-      public string  name_shop { get; set; }
-        public DeleteCarForm(string shopName)
+        public DeleteSalonForm()
         {
             InitializeComponent();
-            name_shop = shopName;
         }
 
-        private void DeleteProductForm_Load(object sender, EventArgs e)
+        private void DeleteShop_Click(object sender, EventArgs e)
         {
-        }
-
-        private void DeleteProductBtn_Click(object sender, EventArgs e)
-        {
-            if (IndexTxtBox.TextLength > 0)
+            if (txtBoxDeleteNameShop.TextLength > 0)
             {
-                ContrDB.DeleteProductDB(name_shop, Int32.Parse(IndexTxtBox.Text));
+                DatabaseController.DeleteSalonDB(txtBoxDeleteNameShop.Text);
                 Close();
             }
             else

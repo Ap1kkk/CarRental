@@ -12,13 +12,14 @@ namespace CarRental
 {
     public partial class AddOrderForm : Form
     {
-        public string shop_name { get; set; }
-        public Order order_item = new Order();
-        public AddOrderForm(string ShopName, Order new_order)
+        private string _salonName { get; set; }
+        private Order _orderItem { get; set; } = new Order();
+
+        public AddOrderForm(string salonName, Order newOrder)
         {
             InitializeComponent();
-            shop_name = ShopName;
-            order_item = new_order;
+            _salonName = salonName;
+            _orderItem = newOrder;
         }
 
         private void AddOrderBtn_Click(object sender, EventArgs e)
@@ -27,10 +28,10 @@ namespace CarRental
               descTxt.TextLength > 0 &&
               priceTxt.TextLength > 0)
             {
-                order_item.order_num = Int32.Parse(IndexTxt.Text);
-                order_item.descr = descTxt.Text;
-                order_item.total_price = Int32.Parse(priceTxt.Text);
-                ContrDB.AddOrderDB(shop_name, order_item);
+                _orderItem.OrderId = Int32.Parse(IndexTxt.Text);
+                _orderItem.Description = descTxt.Text;
+                _orderItem.TotalPrice = Int32.Parse(priceTxt.Text);
+                DatabaseController.AddOrderDB(_salonName, _orderItem);
                 Close();
             }
             else
@@ -41,8 +42,8 @@ namespace CarRental
 
         private void AddOLineItemBtn_Click(object sender, EventArgs e)
         {
-            AddOrderLineItemForm OLineitem = new AddOrderLineItemForm(shop_name, order_item);
-            OLineitem.Show();
+            AddOrderItemForm addOrderItemForm = new AddOrderItemForm(_salonName, _orderItem);
+            addOrderItemForm.Show();
             Close();
         }
     }

@@ -8,29 +8,27 @@ namespace CarRental
 {
   public  class Employee
     {
-        public string firstName { get; set; }
-        public string lastName { get; set; }
+        public string Firstname { get; set; }
+        public string Lastname { get; set; }
         public string PhoneNumber { get; set; }
-        public string status { get; set; }
-        public string experience { get; set; }
-        public string workBegin { get; set; }
-        public string workEnd { get; set; }
+        public string Status { get; set; }
+        public string Experience { get; set; }
+        public string WorkBegin { get; set; }
+        public string WorkEnd { get; set; }
 
         public static bool operator !=(Employee left, Employee right)
         {
             if ( (left.PhoneNumber != right.PhoneNumber) ||
-                (left.lastName != right.lastName) ||
-                (left.firstName != right.firstName)
-                )
+                (left.Lastname != right.Lastname) ||
+                (left.Firstname != right.Firstname))
                 return true;
             else return false;
         }
         public static bool operator ==(Employee left, Employee right)
         {
             if ((left.PhoneNumber == right.PhoneNumber) &&
-                            (left.lastName == right.lastName) &&
-                            (left.firstName == right.firstName)
-                            ) return true;
+                            (left.Lastname == right.Lastname) &&
+                            (left.Firstname == right.Firstname)) return true;
             else return false;
         }
     }

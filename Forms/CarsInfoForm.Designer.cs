@@ -1,6 +1,6 @@
 ﻿namespace CarRental
 {
-    partial class InfoAboutProductsForm
+    partial class CarsInfoForm
     {
         /// <summary>
         /// Required designer variable.

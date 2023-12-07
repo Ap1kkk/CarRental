@@ -12,15 +12,16 @@ namespace CarRental
 {
     public partial class AddCarForm : Form
     {
-        public string shop_name { get; set; }
-        public Category categories;
-        public string typeProduct { get; set; }
-        public AddCarForm(string nameShop)
+        private string _salonName { get; set; }
+        private Category _categories { get; set; }
+        private string carCategory { get; set; }
+
+        public AddCarForm(string salonName)
         {
             InitializeComponent();
-            categories = new Category();
-            shop_name = nameShop;
-            foreach( string type in categories.GetCategories())
+            _categories = new Category();
+            _salonName = salonName;
+            foreach( string type in _categories.GetCategories())
             {
                 comboBox1.Items.Add(type);
             }
@@ -44,17 +45,17 @@ namespace CarRental
                 descr.TextLength > 0 &&
                 comboBox1.SelectedItem != null)
             {
-                Car prod = new Car();
-                prod.product.name = name.Text;
-                prod.product.id = Int32.Parse(index.Text);
-                prod.product.producer = producer.Text;
-                prod.product.date_create = date.Text;
-                prod.product.price = Int32.Parse(price.Text);
-                prod.product.count = Int32.Parse(count.Text);
-                prod.product.description = descr.Text;
-                prod.category = typeProduct;
+                Car car = new Car();
+                car.CarItem.Name = name.Text;
+                car.CarItem.Id = Int32.Parse(index.Text);
+                car.CarItem.Producer = producer.Text;
+                car.CarItem.CreationDate = date.Text;
+                car.CarItem.Price = Int32.Parse(price.Text);
+                car.CarItem.StockQuantity = Int32.Parse(count.Text);
+                car.CarItem.Description = descr.Text;
+                car.Category = carCategory;
 
-                ContrDB.AddProductDB(shop_name, prod);
+                DatabaseController.AddCarDB(_salonName, car);
                 Close();
             }
             else
@@ -77,7 +78,7 @@ namespace CarRental
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             string selectedState = comboBox1.SelectedItem.ToString();
-            typeProduct = selectedState;
+            carCategory = selectedState;
         }
     }
 }

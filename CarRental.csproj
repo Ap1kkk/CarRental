@@ -46,125 +46,124 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddEmployeeForm.cs">
+    <Compile Include="Forms\AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEmployeeForm.Designer.cs">
+    <Compile Include="Forms\AddEmployeeForm.Designer.cs">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOrderForm.cs">
+    <Compile Include="Forms\AddOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOrderForm.Designer.cs">
+    <Compile Include="Forms\AddOrderForm.Designer.cs">
       <DependentUpon>AddOrderForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddOrderLineItemForm.cs">
+    <Compile Include="Forms\AddOrderItemForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddOrderLineItemForm.Designer.cs">
-      <DependentUpon>AddOrderLineItemForm.cs</DependentUpon>
+    <Compile Include="Forms\AddOrderItemForm.Designer.cs">
+      <DependentUpon>AddOrderItemForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddCarForm.cs">
+    <Compile Include="Forms\AddCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddCarForm.Designer.cs">
+    <Compile Include="Forms\AddCarForm.Designer.cs">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Category.cs" />
-    <Compile Include="ContrDB.cs" />
-    <Compile Include="AddSalonForm.cs">
+    <Compile Include="ObjectModel\Category.cs" />
+    <Compile Include="Controllers\DatabaseController.cs" />
+    <Compile Include="Forms\AddSalonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddSalonForm.Designer.cs">
+    <Compile Include="Forms\AddSalonForm.Designer.cs">
       <DependentUpon>AddSalonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer.cs" />
-    <Compile Include="DeleteEmployeeForm.cs">
+    <Compile Include="Forms\DeleteEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteEmployeeForm.Designer.cs">
+    <Compile Include="Forms\DeleteEmployeeForm.Designer.cs">
       <DependentUpon>DeleteEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteCarForm.cs">
+    <Compile Include="Forms\DeleteCarForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteCarForm.Designer.cs">
+    <Compile Include="Forms\DeleteCarForm.Designer.cs">
       <DependentUpon>DeleteCarForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteSalonForm.cs">
+    <Compile Include="Forms\DeleteSalonForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteSalonForm.Designer.cs">
+    <Compile Include="Forms\DeleteSalonForm.Designer.cs">
       <DependentUpon>DeleteSalonForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoAboutEmployeesForm.cs">
+    <Compile Include="Forms\EmployeesInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoAboutEmployeesForm.Designer.cs">
-      <DependentUpon>InfoAboutEmployeesForm.cs</DependentUpon>
+    <Compile Include="Forms\EmployeesInfoForm.Designer.cs">
+      <DependentUpon>EmployeesInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoAboutOrdersForm.cs">
+    <Compile Include="Forms\OrdersInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoAboutOrdersForm.Designer.cs">
-      <DependentUpon>InfoAboutOrdersForm.cs</DependentUpon>
+    <Compile Include="Forms\OrdersInfoForm.Designer.cs">
+      <DependentUpon>OrdersInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="InfoAboutProductsForm.cs">
+    <Compile Include="Forms\CarsInfoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InfoAboutProductsForm.Designer.cs">
-      <DependentUpon>InfoAboutProductsForm.cs</DependentUpon>
+    <Compile Include="Forms\CarsInfoForm.Designer.cs">
+      <DependentUpon>CarsInfoForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainContr.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderLineitem.cs" />
-    <Compile Include="Order.cs" />
-    <Compile Include="Car.cs" />
-    <Compile Include="Employee.cs" />
-    <Compile Include="CarItem.cs" />
+    <Compile Include="ObjectModel\OrderItem.cs" />
+    <Compile Include="ObjectModel\Order.cs" />
+    <Compile Include="ObjectModel\Car.cs" />
+    <Compile Include="ObjectModel\Employee.cs" />
+    <Compile Include="ObjectModel\CarItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Salon.cs" />
-    <Compile Include="SalonContr.cs" />
-    <EmbeddedResource Include="AddEmployeeForm.resx">
+    <Compile Include="ObjectModel\CarSalon.cs" />
+    <Compile Include="Controllers\SalonController.cs" />
+    <EmbeddedResource Include="Forms\AddEmployeeForm.resx">
       <DependentUpon>AddEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddOrderForm.resx">
+    <EmbeddedResource Include="Forms\AddOrderForm.resx">
       <DependentUpon>AddOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddOrderLineItemForm.resx">
-      <DependentUpon>AddOrderLineItemForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AddOrderItemForm.resx">
+      <DependentUpon>AddOrderItemForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddCarForm.resx">
+    <EmbeddedResource Include="Forms\AddCarForm.resx">
       <DependentUpon>AddCarForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddSalonForm.resx">
+    <EmbeddedResource Include="Forms\AddSalonForm.resx">
       <DependentUpon>AddSalonForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteEmployeeForm.resx">
+    <EmbeddedResource Include="Forms\DeleteEmployeeForm.resx">
       <DependentUpon>DeleteEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteCarForm.resx">
+    <EmbeddedResource Include="Forms\DeleteCarForm.resx">
       <DependentUpon>DeleteCarForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteSalonForm.resx">
+    <EmbeddedResource Include="Forms\DeleteSalonForm.resx">
       <DependentUpon>DeleteSalonForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoAboutEmployeesForm.resx">
-      <DependentUpon>InfoAboutEmployeesForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EmployeesInfoForm.resx">
+      <DependentUpon>EmployeesInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoAboutOrdersForm.resx">
-      <DependentUpon>InfoAboutOrdersForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\OrdersInfoForm.resx">
+      <DependentUpon>OrdersInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InfoAboutProductsForm.resx">
-      <DependentUpon>InfoAboutProductsForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\CarsInfoForm.resx">
+      <DependentUpon>CarsInfoForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -195,5 +194,6 @@
   <ItemGroup>
     <Content Include="DataBase.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

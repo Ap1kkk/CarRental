@@ -8,16 +8,16 @@ namespace CarRental
 {
    public class Category
     {
-        public List<string> categories { get; set; }
-        
+        public List<string> Categories { get; set; }
+
         public Category()
         {
-            categories = new List<string> {"Легковой автомобиль", "Седан", "Хэтчбэк", "Кроссовер", "Грузовик", "Внедорожник" };
+            Categories = new List<string> {"Легковой автомобиль", "Седан", "Хэтчбэк", "Кроссовер", "Грузовик", "Внедорожник" };
         }
 
         public IReadOnlyCollection<string> GetCategories()
         {
-            return categories.AsReadOnly();
+            return Categories.AsReadOnly();
         }
     }
 }
